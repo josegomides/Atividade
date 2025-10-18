@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class main {
     public static void main(String[] args) {
        int idade, opcao;
+       double comprimento;
        
        Scanner sc = new Scanner (System.in);
        
@@ -14,6 +15,7 @@ public class main {
            System.out.println("3 - CONVERSOR DE TEMPERATURA");
            System.out.println("4 - CONCATENADOR DE NOME COMPLETO");
            System.out.println("5 - SAIR");
+           System.out.println("ESCOLHA UMA OPCAO:   ");
            opcao = sc.nextInt();
            sc.nextLine();
            
@@ -24,6 +26,16 @@ public class main {
                    
                    VerificadorVoto oVerificador = new VerificadorVoto(idade);
                    oVerificador.podeVotar();
+                break;
+                
+               case 2:
+                   System.out.println("DIGITE O COMPRIMENTO DO LADO");
+                   comprimento = sc.nextDouble();
+                   
+                   CalculadoraGeometria oCalcular = new CalculadoraGeometria(comprimento, comprimento);
+                   oCalcular.calcularGeo();
+                break;
+                   
            }
            
        } while (opcao <= 5);
