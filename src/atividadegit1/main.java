@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class main {
     public static void main(String[] args) {
        int idade, opcao;
-       double comprimento;
+       double comprimento, celsius;
        
        Scanner sc = new Scanner (System.in);
        
@@ -35,6 +35,14 @@ public class main {
                    CalculadoraGeometria oCalcular = new CalculadoraGeometria(comprimento, comprimento);
                    oCalcular.calcularGeo();
                 break;
+                
+               case 3:
+                   System.out.println("DIGITE QUANTOS GRAUS:    ");
+                   celsius = sc.nextDouble();
+                   
+                   ConversorTemperatura oConversor = new ConversorTemperatura(celsius);
+                   oConversor.celsiusFah();
+                
                    
            }
            
